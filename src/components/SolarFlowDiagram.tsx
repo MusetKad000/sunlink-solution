@@ -65,9 +65,8 @@ function Node({
   return (
     <motion.g
       initial={{ opacity: 0, scale: 0.7 }}
-      whileInView={{ opacity: 1, scale: 1 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5, delay, ease: [0.34, 1.4, 0.64, 1] }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.5, delay: 0.3 + delay, ease: [0.34, 1.4, 0.64, 1] }}
     >
       {/* outer pulse ring */}
       {pulse ? (
