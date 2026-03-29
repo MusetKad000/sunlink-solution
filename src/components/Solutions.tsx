@@ -182,7 +182,7 @@ export default function Solutions() {
               </div>
 
               {/* Lucide icon circle */}
-              <div style={{
+              <div className="solution-icon" style={{
                 width: 52,
                 height: 52,
                 borderRadius: 12,
@@ -285,6 +285,7 @@ export default function Solutions() {
           .solution-card ul{align-items:center!important;}
           .solution-card li{justify-content:center!important;}
           .solution-card>a{justify-content:center!important;}
+          .solution-icon{margin-left:auto!important; margin-right:auto!important;}
         }
       `}</style>
     </section>

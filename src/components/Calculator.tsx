@@ -244,6 +244,7 @@ export default function Calculator() {
       <style>{`
         @media(max-width:640px){
           .calc-metrics{grid-template-columns:1fr!important;}
+          .calc-metrics>div{text-align:center!important; align-items:center!important; display:flex!important; flex-direction:column!important;}
           .calc-bill{padding:28px 24px!important;}
           .calc-cta-strip{flex-direction:column!important; align-items:stretch!important; padding:20px 24px!important;}
           .calc-cta-strip a{text-align:center!important; justify-content:center!important;}
