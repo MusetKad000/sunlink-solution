@@ -124,7 +124,7 @@ export default function SolarFlowDiagram() {
   const BLUE  = "#00aaff";
 
   return (
-    <section style={{ background: "transparent", padding: "80px 24px", position: "relative" }}>
+    <section style={{ background: "transparent", padding: "80px 24px", position: "relative", overflow: "hidden" }}>
       <div
         style={{
           maxWidth: 1280,
@@ -204,11 +204,11 @@ export default function SolarFlowDiagram() {
         </motion.div>
 
         {/* ── Right: diagram ──────────────────────────── */}
-        <motion.div {...fadeUp(0.18)} style={{ display: "flex", justifyContent: "center", alignItems: "center", overflow: "hidden" }}>
+        <motion.div {...fadeUp(0.18)} style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
           <svg
             viewBox="0 0 460 260"
             width="100%"
-            style={{ maxWidth: 620, overflow: "hidden", display: "block" }}
+            style={{ maxWidth: 620, overflow: "visible", display: "block" }}
             aria-label="Solar energy flow: sun to panels to battery and home"
           >
             {/*
