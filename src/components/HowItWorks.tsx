@@ -138,7 +138,7 @@ export default function HowItWorks() {
 
               {/* Card */}
               <div
-                className="glass-card"
+                className="glass-card step-card"
                 style={{ padding: "24px 20px", textAlign: "left" }}
               >
                 <div style={{
@@ -219,6 +219,7 @@ export default function HowItWorks() {
         }
         @media(max-width:540px){
           .four-col{grid-template-columns:1fr!important;}
+          .step-card{text-align:center!important;}
         }
       `}</style>
     </section>

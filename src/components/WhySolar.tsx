@@ -173,7 +173,11 @@ export default function WhySolar() {
       </div>
       <style>{`
         @media(max-width:900px){.three-col{grid-template-columns:1fr!important;}}
-        @media(max-width:640px){.why-card{padding:28px 24px!important;}}
+        @media(max-width:640px){
+          .why-card{padding:28px 24px!important; text-align:center!important;}
+          .why-card ul{align-items:center!important;}
+          .why-card li{justify-content:center!important;}
+        }
       `}</style>
     </section>
   );
