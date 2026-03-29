@@ -12,8 +12,8 @@ const benefits = [
     statPrefix: "$",
     statSuffix: "+",
     statLabel: "avg. annual savings",
-    body: "Most homeowners cut their electric bill by 70–100%. Lock in your energy cost while utility rates keep climbing.",
-    points: ["Net metering credits", "Fixed cost for 25+ years", "Immediate monthly impact"],
+    body: "Most homeowners reduce their electric bill by 35–50%. Lock in your energy cost while utility rates keep climbing.",
+    points: ["Transparent rate schedule", "Protection against utility rate increases", "Immediate monthly impact"],
   },
   {
     Icon: Zap,
