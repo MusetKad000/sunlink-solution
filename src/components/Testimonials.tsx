@@ -103,7 +103,7 @@ export default function Testimonials() {
         {/* Carousel */}
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <div
-            className="glass-card"
+            className="glass-card testimonial-card"
             style={{
               padding: "48px 52px",
               border: "1px solid rgba(0,102,255,0.2)",
@@ -256,6 +256,11 @@ export default function Testimonials() {
           </motion.div>
         </div>
       </div>
+      <style>{`
+        @media(max-width:640px){
+          .testimonial-card{padding:28px 24px!important;}
+        }
+      `}</style>
     </section>
   );
 }

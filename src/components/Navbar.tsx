@@ -62,7 +62,7 @@ export default function Navbar() {
           </a>
 
           {/* Desktop nav */}
-          <nav style={{ display: "flex", gap: 36, alignItems: "center" }} className="hidden md:flex">
+          <nav className="nav-desktop" style={{ gap: 36, alignItems: "center" }}>
             {links.map(link => (
               <a
                 key={link.label}
@@ -83,8 +83,8 @@ export default function Navbar() {
             ))}
           </nav>
 
-          {/* CTA */}
-          <a href="#contact" className="btn-primary hidden md:inline-flex" style={{ padding: "10px 22px", fontSize: 14 }}>
+          {/* Desktop CTA */}
+          <a href="#contact" className="btn-primary nav-cta-desktop" style={{ padding: "10px 22px", fontSize: 14 }}>
             Get Quote
             <ArrowRight size={15} />
           </a>
@@ -92,7 +92,7 @@ export default function Navbar() {
           {/* Mobile toggle */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="md:hidden"
+            className="nav-mobile-toggle"
             style={{ background: "none", border: "none", color: "#fff", cursor: "pointer", padding: 4 }}
             aria-label="Toggle menu"
           >
@@ -133,6 +133,16 @@ export default function Navbar() {
           </motion.div>
         )}
       </AnimatePresence>
+      <style>{`
+        .nav-desktop      { display: flex; }
+        .nav-cta-desktop  { display: inline-flex; }
+        .nav-mobile-toggle{ display: none; }
+        @media(max-width: 768px){
+          .nav-desktop      { display: none !important; }
+          .nav-cta-desktop  { display: none !important; }
+          .nav-mobile-toggle{ display: flex !important; }
+        }
+      `}</style>
     </motion.header>
   );
 }

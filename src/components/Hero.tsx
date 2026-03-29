@@ -128,7 +128,7 @@ export default function Hero() {
 
         {/* Stats pill */}
         <motion.div {...fadeUp(0.28)}>
-          <div style={{
+          <div className="hero-stats-pill" style={{
             display: "inline-flex",
             alignItems: "center",
             background: "rgba(255,255,255,0.025)",
@@ -145,7 +145,7 @@ export default function Hero() {
               { Icon: Shield,       value: "25yr",    label: "Warranty" },
             ].map(({ Icon, value, label }, i) => (
               <div key={label} style={{ display: "flex", alignItems: "center" }}>
-                {i > 0 && <span style={{ width: 1, height: 26, background: "rgba(0,170,255,0.18)", margin: "0 24px" }} />}
+                {i > 0 && <span className="hero-stat-divider" style={{ width: 1, height: 26, background: "rgba(0,170,255,0.18)", margin: "0 24px" }} />}
                 <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
                   <Icon size={15} color="#00aaff" strokeWidth={2} />
                   <span style={{ fontWeight: 800, fontSize: 14, color: "#fff", fontFamily: "Inter, sans-serif" }}>{value}</span>
@@ -156,6 +156,12 @@ export default function Hero() {
           </div>
         </motion.div>
       </div>
+      <style>{`
+        @media(max-width:600px){
+          .hero-stats-pill{flex-direction:column!important; border-radius:16px!important; padding:20px 24px!important; gap:12px!important; align-items:flex-start!important;}
+          .hero-stat-divider{display:none!important;}
+        }
+      `}</style>
     </section>
   );
 }

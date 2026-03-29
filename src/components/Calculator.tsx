@@ -85,7 +85,7 @@ export default function Calculator() {
           transition={{ duration: 0.7 }}
         >
           {/* Bill input block */}
-          <div style={{
+          <div className="calc-bill" style={{
             background: "rgba(0,102,255,0.04)",
             border: "1px solid rgba(0,102,255,0.15)",
             borderRadius: 20,
@@ -198,7 +198,7 @@ export default function Calculator() {
           </div>
 
           {/* CTA + disclaimer */}
-          <div style={{
+          <div className="calc-cta-strip" style={{
             background: "rgba(0,102,255,0.04)",
             border: "1px solid rgba(0,102,255,0.12)",
             borderRadius: 16,
@@ -241,7 +241,14 @@ export default function Calculator() {
           </div>
         </motion.div>
       </div>
-      <style>{`@media(max-width:640px){.calc-metrics{grid-template-columns:1fr!important;}}`}</style>
+      <style>{`
+        @media(max-width:640px){
+          .calc-metrics{grid-template-columns:1fr!important;}
+          .calc-bill{padding:28px 24px!important;}
+          .calc-cta-strip{flex-direction:column!important; align-items:stretch!important; padding:20px 24px!important;}
+          .calc-cta-strip a{text-align:center!important; justify-content:center!important;}
+        }
+      `}</style>
     </section>
   );
 }

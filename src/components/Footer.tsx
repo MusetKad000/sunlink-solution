@@ -157,7 +157,10 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <style>{`@media(max-width:768px){.footer-grid{grid-template-columns:1fr 1fr!important;} .footer-grid>:first-child{grid-column:span 2;}}`}</style>
+      <style>{`
+        @media(max-width:768px){.footer-grid{grid-template-columns:1fr 1fr!important;} .footer-grid>:first-child{grid-column:span 2;}}
+        @media(max-width:480px){.footer-grid{grid-template-columns:1fr!important;} .footer-grid>:first-child{grid-column:span 1!important;}}
+      `}</style>
     </footer>
   );
 }

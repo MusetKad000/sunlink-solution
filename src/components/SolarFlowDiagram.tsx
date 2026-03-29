@@ -204,11 +204,11 @@ export default function SolarFlowDiagram() {
         </motion.div>
 
         {/* ── Right: diagram ──────────────────────────── */}
-        <motion.div {...fadeUp(0.18)} style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+        <motion.div {...fadeUp(0.18)} style={{ display: "flex", justifyContent: "center", alignItems: "center", overflow: "hidden" }}>
           <svg
             viewBox="0 0 460 260"
             width="100%"
-            style={{ maxWidth: 620, overflow: "visible" }}
+            style={{ maxWidth: 620, overflow: "hidden", display: "block" }}
             aria-label="Solar energy flow: sun to panels to battery and home"
           >
             {/*
@@ -290,7 +290,12 @@ export default function SolarFlowDiagram() {
         </motion.div>
       </div>
 
-      <style>{`@media(max-width:768px){.sfd-grid{grid-template-columns:1fr!important;gap:48px!important;}}`}</style>
+      <style>{`
+        @media(max-width:768px){
+          .sfd-grid{grid-template-columns:1fr!important; gap:32px!important;}
+          .sfd-grid>div:last-child{padding:0 8px;}
+        }
+      `}</style>
     </section>
   );
 }

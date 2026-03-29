@@ -62,7 +62,7 @@ export default function ContactCTA() {
             transition={{ duration: 0.7 }}
           >
             <div
-              className="glass-card"
+              className="glass-card contact-form-card"
               style={{
                 padding: 40,
                 border: "1px solid rgba(0,102,255,0.2)",
@@ -73,7 +73,7 @@ export default function ContactCTA() {
 
               {!done ? (
                 <form onSubmit={e => { e.preventDefault(); setDone(true); }}>
-                  <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14, marginBottom: 14 }}>
+                  <div className="form-fields-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14, marginBottom: 14 }}>
                     {[
                       { id: "name",  label: "Full Name",  type: "text",  ph: "John Smith",       key: "name"  as const },
                       { id: "email", label: "Email",      type: "email", ph: "john@example.com", key: "email" as const },
@@ -232,6 +232,10 @@ export default function ContactCTA() {
       </div>
       <style>{`
         @media(max-width:768px){.contact-grid{grid-template-columns:1fr!important;}}
+        @media(max-width:640px){
+          .contact-form-card{padding:24px!important;}
+          .form-fields-grid{grid-template-columns:1fr!important;}
+        }
         @keyframes pulse{0%,100%{opacity:1;}50%{opacity:0.4;}}
       `}</style>
     </section>

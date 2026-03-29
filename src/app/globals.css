@@ -126,6 +126,14 @@ body {
   transform: translateY(-2px);
 }
 
+/* ── Mobile base fixes ─────────────────────────────────── */
+@media(max-width:768px){
+  /* Prevent iOS auto-zoom on input focus */
+  input, select, textarea { font-size: 16px !important; }
+  /* Ensure images don't overflow */
+  img { max-width: 100%; }
+}
+
 /* ── Scrollbar ─────────────────────────────────────────── */
 ::-webkit-scrollbar { width: 5px; }
 ::-webkit-scrollbar-track { background: #000; }

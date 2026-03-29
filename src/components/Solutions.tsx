@@ -111,6 +111,7 @@ export default function Solutions() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.65, delay: i * 0.1 }}
+              className={card.featured ? "solution-card-featured" : ""}
               style={{
                 position: "relative",
                 borderRadius: 24,
@@ -276,7 +277,10 @@ export default function Solutions() {
           </a>
         </motion.p>
       </div>
-      <style>{`@media(max-width:900px){.three-col{grid-template-columns:1fr!important;}}`}</style>
+      <style>{`
+        @media(max-width:900px){.three-col{grid-template-columns:1fr!important;}}
+        @media(max-width:900px){.solution-card-featured{margin-top:0!important;}}
+      `}</style>
     </section>
   );
 }

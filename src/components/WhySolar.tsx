@@ -116,7 +116,7 @@ export default function WhySolar() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.65, delay: i * 0.1 }}
-              className="glass-card glass-card-hover"
+              className="glass-card glass-card-hover why-card"
               style={{ padding: 40, cursor: "default" }}
             >
               {/* Lucide icon — no emojis */}
@@ -171,7 +171,10 @@ export default function WhySolar() {
           ))}
         </div>
       </div>
-      <style>{`@media(max-width:900px){.three-col{grid-template-columns:1fr!important;}}`}</style>
+      <style>{`
+        @media(max-width:900px){.three-col{grid-template-columns:1fr!important;}}
+        @media(max-width:640px){.why-card{padding:28px 24px!important;}}
+      `}</style>
     </section>
   );
 }
