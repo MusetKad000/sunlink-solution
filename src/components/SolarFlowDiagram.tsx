@@ -137,7 +137,7 @@ export default function SolarFlowDiagram() {
       >
 
         {/* ── Left: copy ──────────────────────────────── */}
-        <motion.div {...fadeUp(0)} style={{ paddingLeft: 8 }}>
+        <motion.div {...fadeUp(0)} className="sfd-copy" style={{ paddingLeft: 8 }}>
           <div style={{
             fontSize: 11,
             fontWeight: 600,
@@ -293,6 +293,10 @@ export default function SolarFlowDiagram() {
         @media(max-width:768px){
           .sfd-grid{grid-template-columns:1fr!important; gap:32px!important;}
           .sfd-grid>div:last-child{padding:0 8px;}
+          .sfd-copy{text-align:center!important; padding-left:0!important;}
+          .sfd-copy ul{align-items:center!important;}
+          .sfd-copy li{justify-content:center!important;}
+          .sfd-copy p{margin-left:auto!important; margin-right:auto!important;}
         }
       `}</style>
     </section>
