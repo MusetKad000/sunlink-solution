@@ -120,7 +120,7 @@ export default function WhySolar() {
               style={{ padding: 40, cursor: "default" }}
             >
               {/* Lucide icon — no emojis */}
-              <div style={{
+              <div className="why-icon" style={{
                 width: 48,
                 height: 48,
                 borderRadius: 12,
@@ -177,6 +177,7 @@ export default function WhySolar() {
           .why-card{padding:28px 24px!important; text-align:center!important;}
           .why-card ul{align-items:center!important;}
           .why-card li{justify-content:center!important;}
+          .why-icon{margin-left:auto!important; margin-right:auto!important;}
         }
       `}</style>
     </section>
